@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react";
 
 // styles
 const pageStyles = {
@@ -106,4 +106,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default IndexPage;

@@ -5,6 +5,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../utils/global-styles.css';
 import {layoutStyles} from "../utils/styled-layout";
 import Header from "../components/Header";
+import TopMenu from "../components/TopMenu";
 
 
 
@@ -16,6 +17,7 @@ const Main = () => {
     return(
         <LayoutWrapper>
             <Header/>
+            <TopMenu/>
         </LayoutWrapper>
     );
 }

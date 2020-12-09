@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../utils/global-styles.css';
 
 
 const Main = () => {

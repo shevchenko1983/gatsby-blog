@@ -3,8 +3,8 @@ import {css} from "styled-components";
 
 export const font = {
     fontFamily: [
-        'Roboto',
-        '"Helvetica Neue"',
+        'Raleway',
+        'Helvetica Neue',
         'Arial',
         'sans-serif',
     ].join(),
@@ -19,6 +19,7 @@ export const sizing = {
     default: '16px',
     big: '18px',
     heading: '20px',
+    bigHeading: '24px',
     normal: '14px',
     text: '12px',
     small: '10px',
@@ -43,6 +44,8 @@ export const color = {
     btnHoverBg: 'rgba(17, 17, 17, 1.8)',
     btnCallToAction: '#111',
     btnCallToActionBg: 'rgba(255, 255, 255, .8)',
+    shadowText: '2px 1px 1px rgba(255,255,255,0.4)',
+    headerOverlay: 'rgba(44, 62, 80, 0.3)',
 };
 
 

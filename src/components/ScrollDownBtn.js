@@ -2,8 +2,9 @@ import React from 'react';
 import {FaAngleDown} from "react-icons/fa";
 import {color, sizing} from "../utils/styled-layout";
 import styled from '../../node_modules/styled-components';
+import { Link, animateScroll as scroll } from "react-scroll";
 
-const ScrollDownBtnWrapper = styled('a')`
+const ScrollDownBtnWrapper = styled('span')`
     .scroll-down {
      position: absolute;
      left: 50%;
@@ -16,6 +17,7 @@ const ScrollDownBtnWrapper = styled('a')`
      display: block;
      z-index: 10;
      text-align: center;
+     cursor:pointer;
      
       & span{
         position: relative;
@@ -54,13 +56,20 @@ const ScrollDownBtnWrapper = styled('a')`
 
 const ScrollDownBtn = () => {
     return(
-        <ScrollDownBtnWrapper href="#portfolio" className={'scroll-down__btn'}>
-            <div className="scroll-down">
-                    <span>
-                        <FaAngleDown/>
-                    </span>
-            </div>
-        </ScrollDownBtnWrapper>
+            <ScrollDownBtnWrapper  className={'scroll-down__btn'}>
+                <Link  activeClass="active"
+                       to="portfolio"
+                       spy={true}
+                       smooth={true}
+                       offset={0}
+                       duration={1000}>
+                            <div className="scroll-down">
+                                    <span>
+                                        <FaAngleDown/>
+                                    </span>
+                            </div>
+                </Link>
+            </ScrollDownBtnWrapper>
     );
 };
 

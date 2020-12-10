@@ -6,6 +6,7 @@ import '../utils/global-styles.css';
 import {layoutStyles} from "../utils/styled-layout";
 import Header from "../components/Header";
 import TopMenu from "../components/TopMenu";
+import Services from "../components/services/Services";
 
 
 
@@ -18,6 +19,7 @@ const Main = () => {
         <LayoutWrapper>
             <Header/>
             <TopMenu/>
+            <Services/>
         </LayoutWrapper>
     );
 }

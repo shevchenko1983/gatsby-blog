@@ -40,6 +40,7 @@ export const color = {
     white: '#fff',
     black: '#000',
     lightGrey: '#f5f5f5',
+    smallTextColor: '#666',
     pfBlockBorderColor: 'rgba(135, 135, 135, 0.5)',
     backgroundColor: '#f4f4f4',
     linkColor: '#E7746F',

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '../../../node_modules/styled-components';
 import SectionTopDescription from "../SectionTopDescription";
 import {graphql, StaticQuery} from "gatsby";
+import IconBox from "./IconBox";
 
 const ServicesWrapper = styled('section')`
   
@@ -18,6 +19,12 @@ const Services = () => {
                             acf {
                                 title
                                 title_description
+                                 our_services {
+                                    class_motion
+                                    icon_class
+                                    title_service
+                                    description_service
+                                 }
                             }
                         }
                     }
@@ -33,6 +40,16 @@ const Services = () => {
                                             description: data.wordpressPage?.acf?.title_description
                                         }}
                                     />
+                                </div>
+                                <div className="row">
+                                    {data.wordpressPage?.acf?.our_services?.map((item, index) => {
+                                        return <IconBox key={index}
+                                                        title={item.title_service}
+                                                        text={item.description_service}
+                                                        icon={item.icon_class}
+                                                        animationName={item.class_motion}
+                                                />
+                                    })}
                                 </div>
                             </div>
                         </ServicesWrapper>

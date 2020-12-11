@@ -19,7 +19,7 @@ const SectionTopDescription = ({content}) => {
 
     return(
         <SectionTopDescriptionWrapper className="col-sm-6 offset-sm-3">
-            <div className="pfblock-header wow fadeInUp">
+            <div className="pfblock-header">
                 <h2 className="pfblock-title">{title}</h2>
                 <div className="pfblock-line"></div>
                 <div className="pfblock-subtitle">

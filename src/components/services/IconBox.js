@@ -75,7 +75,7 @@ const IconBox = ({title, text, icon, animationName}) => {
     }
 
     return(
-        <IconBoxWrapper className={`col-sm-3 wow animate__animated animate__${animationName}`} data-wow-duration="2s">
+        <IconBoxWrapper className={`col-sm-3 wow animate__animated animate__${animationName}`} data-wow-duration="1.2s">
             <div className={"iconbox"}>
                 <div className="iconbox-icon">
                     {chooseCurrentIcon(icon)}

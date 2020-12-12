@@ -39,6 +39,7 @@ const Services = () => {
                                             title: data.wordpressPage?.acf?.title,
                                             description: data.wordpressPage?.acf?.title_description
                                         }}
+                                        animationName={"fadeInUp"}
                                     />
                                 </div>
                                 <div className="row">

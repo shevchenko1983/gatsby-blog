@@ -7,14 +7,15 @@ import {FaPaintBrush, FaCode, FaGem, FaEdit} from 'react-icons/fa';
 import HTMLReactParser from "html-react-parser";
 
 
-const IconBoxWrapper = styled('div')`    
+const IconBoxWrapper = styled('div')` 
+     margin-bottom: 20px;       
     & .iconbox {
      background: ${color.white};
      border-bottom: 1px solid ${color.inputBgBorderColor};
      text-align: center;
      padding: 40px 20px;
      margin: 0 0 20px;
-     font-weight: 500;
+     font-weight: 500;     
     }
     
     & .iconbox-icon {
@@ -32,6 +33,12 @@ const IconBoxWrapper = styled('div')`
         font-size: ${sizing.normal};
         font-weight: ${font.lightWeight}; 
     }
+    
+    @media(max-width: 1240px){
+         & .iconbox {
+            height: 100%;
+         }
+    }
 
 `;
 
@@ -46,7 +53,7 @@ const IconBox = ({title, text, icon, animationName}) => {
                 mobile: true,       // trigger animations on mobile devices (default is true)
                 live: false,       // act on asynchronously loaded content (default is true)
                 callback: function (box) {
-                    console.log(box)
+                   //console.log(box)
                     //the callback is fired every time an animation is started
                     //the argument that is passed in is the DOM node being animated
                 },
@@ -75,7 +82,7 @@ const IconBox = ({title, text, icon, animationName}) => {
     }
 
     return(
-        <IconBoxWrapper className={`col-sm-3 wow animate__animated animate__${animationName}`} data-wow-duration="1.2s">
+        <IconBoxWrapper className={`col-xs-12 col-sm-6 col-md-6 col-lg-3 wow animate__animated animate__${animationName}`} data-wow-duration="1.2s">
             <div className={"iconbox"}>
                 <div className="iconbox-icon">
                     {chooseCurrentIcon(icon)}

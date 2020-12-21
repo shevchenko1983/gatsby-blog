@@ -7,6 +7,7 @@ import {layoutStyles} from "../utils/styled-layout";
 import Header from "../components/Header";
 import TopMenu from "../components/TopMenu";
 import Services from "../components/services/Services";
+import Portfolio from "../components/portfolio/Portfolio";
 
 
 
@@ -20,6 +21,7 @@ const Main = () => {
             <Header/>
             <TopMenu/>
             <Services/>
+            <Portfolio/>
         </LayoutWrapper>
     );
 }

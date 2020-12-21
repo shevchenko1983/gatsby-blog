@@ -40,6 +40,7 @@ const Services = () => {
                                             description: data.wordpressPage?.acf?.title_description
                                         }}
                                         animationName={"fadeInUp"}
+                                        grid={"col-sm-6 offset-sm-3"}
                                     />
                                 </div>
                                 <div className="row">

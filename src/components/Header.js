@@ -1,13 +1,13 @@
 import React from 'react';
 import {color, font, sizing} from "../utils/styled-layout";
 import styled from '../../node_modules/styled-components';
-import HeaderBgImage from '../../src/images/headerImages/cover.jpg';
+//import HeaderBgImage from '../../src/images/headerImages/cover.jpg';
 import ScrollDownBtn from "./ScrollDownBtn";
 
 const HeaderWrapper = styled('section')`
     
     &#home {
-     background: url(${HeaderBgImage});
+     background: url();/*HeaderBgImage*/
      background-color: ${color.headingColor};
      background-attachment: fixed;
      background-repeat: no-repeat;

@@ -6,14 +6,15 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-preload-fonts",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: `${__dirname}/src/images/`,
-      },
-      __key: "images",
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "images",
+    //     path: `${__dirname}/src/images/`,
+    //
+    //   },
+    //   __key: "images",
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {

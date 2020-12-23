@@ -3,6 +3,7 @@ import styled from '../../../node_modules/styled-components';
 import SectionTopDescription from "../SectionTopDescription";
 import {graphql, StaticQuery} from "gatsby";
 import FilterWorks from "./FilterWorks";
+import PortfolioItem from "./PortfolioItem";
 
 const PortfolioWrapper = styled('section')`
 `;
@@ -24,8 +25,8 @@ const Portfolio = () => {
                                 image_preview {
                                   localFile {
                                     childImageSharp {
-                                      fixed{
-                                        base64                                       
+                                      fixed(height: 400){
+                                         ...GatsbyImageSharpFixed                                     
                                       }
                                     }
                                   }
@@ -48,7 +49,16 @@ const Portfolio = () => {
                                 />
                                 <FilterWorks listItems={data.wordpressPage?.acf?.my_works}/>
                             </div>
-                            <div className="row"></div>
+                            <div className="row">
+                                {data.wordpressPage?.acf?.my_works.map((item, index) => {
+                                    return <PortfolioItem key={index}
+                                                          title={item.title_work}
+                                                          image={item.image_preview?.localFile?.childImageSharp?.fixed}
+                                                          link={item.link}
+                                                          description={item.description_work}
+                                            />
+                                })}
+                            </div>
                         </div>
                     </PortfolioWrapper>
                 )

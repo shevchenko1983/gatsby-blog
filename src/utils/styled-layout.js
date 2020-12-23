@@ -53,7 +53,10 @@ export const color = {
     btnCallToAction: '#111',
     btnCallToActionBg: 'rgba(255, 255, 255, .8)',
     shadowText: '2px 1px 1px rgba(255,255,255,0.4)',
+    bubbaTextShadow: '2px 1px 2px rgba(0, 0, 0, 0.86)',
     headerOverlay: 'rgba(44, 62, 80, 0.3)',
+    workItemBgBubba: '#3085a3',
+    bubbaBg: '#9e5406',
 };
 
 

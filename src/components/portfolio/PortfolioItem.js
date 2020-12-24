@@ -33,9 +33,9 @@ const PortfolioItemWrapper = styled('div')`
     }
 `;
 
-const PortfolioItem = ({title, link, image, description}) => {
+const PortfolioItem = ({title, link, image, description, workType}) => {
     return(
-        <PortfolioItemWrapper className={"col-xs-12 col-sm-6 col-md-4 wordpress works-item"}>
+        <PortfolioItemWrapper className={`col-xs-12 col-sm-6 col-md-4 ${workType} works-item`}>
             <div className="grid wow zoomIn animated" style={{visibility: "visible", animationName: "zoomIn"}}>
                 <a href={link} target={"_blank"}>
                     <FigureItem title={title}

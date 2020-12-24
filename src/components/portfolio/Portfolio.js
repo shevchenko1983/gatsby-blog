@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from '../../../node_modules/styled-components';
 import SectionTopDescription from "../SectionTopDescription";
 import {graphql, StaticQuery} from "gatsby";
@@ -9,6 +9,11 @@ const PortfolioWrapper = styled('section')`
 `;
 
 const Portfolio = () => {
+    const [workType, setWorkType] = useState("all");
+    const onFilterWorkTypeHandler = (workType) => {
+        setWorkType(workType);
+    };
+
     return(
         <StaticQuery
             query={graphql`
@@ -47,15 +52,26 @@ const Portfolio = () => {
                                     animationName={"fadeInUp"}
                                     grid={"col-sm-12"}
                                 />
-                                <FilterWorks listItems={data.wordpressPage?.acf?.my_works}/>
+                                <FilterWorks listItems={data.wordpressPage?.acf?.my_works}
+                                             filterAction={onFilterWorkTypeHandler}
+                                />
                             </div>
                             <div className="row">
-                                {data.wordpressPage?.acf?.my_works.map((item, index) => {
+                                {workType === "all" ? data.wordpressPage?.acf?.my_works.map((item, index) => {
                                     return <PortfolioItem key={index}
                                                           title={item.title_work}
                                                           image={item.image_preview?.localFile?.childImageSharp?.fixed}
                                                           link={item.link}
                                                           description={item.description_work}
+                                                          workType={item.type_of_works}
+                                            />
+                                }) : data.wordpressPage?.acf?.my_works.filter((item, index) => item.type_of_works === workType).map((item, index) => {
+                                    return <PortfolioItem key={index}
+                                                        title={item.title_work}
+                                                        image={item.image_preview?.localFile?.childImageSharp?.fixed}
+                                                        link={item.link}
+                                                        description={item.description_work}
+                                                        workType={item.type_of_works}
                                             />
                                 })}
                             </div>

@@ -55,15 +55,18 @@ const FilterWorksWrapper = styled('div')`
     }  
 `;
 
-const FilterWorks = ({listItems}) => {
+const FilterWorks = ({listItems, filterAction}) => {
     //get uniqueValues
     const typeOfWorks = [...new Set(listItems.map((item, index) => item.type_of_works.split(" ")[0]))];
     return(
         <FilterWorksWrapper className={"col-sm-12 filter-works"}>
             <ul>
-                <li className="all">All</li>
+                <li className="all" onClick={() => filterAction("all")}>All</li>
                 {typeOfWorks && typeOfWorks.map((item, index) => {
-                    return <li key={index} className={`${item}-filter`}>
+                    return <li key={index}
+                               className={`${item}-filter`}
+                               onClick={() => filterAction(item)}
+                            >
                         {`${item === 'wordpress' ? 'Site - Branding / WordPress' : 'Online stores / WooCommerce'}`}
                             </li>
                 })}

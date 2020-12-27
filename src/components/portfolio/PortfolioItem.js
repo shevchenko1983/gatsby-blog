@@ -31,9 +31,11 @@ const PortfolioItemWrapper = styled('div')`
             font-size: 68.5%;
         }
     }
+    
 `;
 
 const PortfolioItem = ({title, link, image, description, workType}) => {
+
     return(
         <PortfolioItemWrapper className={`col-xs-12 col-sm-6 col-md-4 ${workType} works-item`}>
             <div className="grid wow zoomIn animated" style={{visibility: "visible", animationName: "zoomIn"}}>

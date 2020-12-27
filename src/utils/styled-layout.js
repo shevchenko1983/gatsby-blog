@@ -253,6 +253,23 @@ export const layoutStyles = css`
     }
 
 
+    .animated{
+        -webkit-animation-duration:1s;
+        animation-duration:1s;
+        -webkit-animation-fill-mode:both;
+        animation-fill-mode:both
+    }
+    @-webkit-keyframes zoomIn{
+        0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}
+        50%{opacity:1}
+    }
+    @keyframes zoomIn{
+        0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);
+        -ms-transform:scale3d(.3,.3,.3);
+        transform:scale3d(.3,.3,.3)}
+        50%{opacity:1}
+    }
+    .zoomIn{-webkit-animation-name:zoomIn;animation-name:zoomIn}
 `;
 
 

@@ -13,7 +13,7 @@ const Portfolio = () => {
     const onFilterWorkTypeHandler = (workType) => {
         setWorkType(workType);
     };
-
+    console.log(workType)
     return(
         <StaticQuery
             query={graphql`
@@ -65,7 +65,7 @@ const Portfolio = () => {
                                                           description={item.description_work}
                                                           workType={item.type_of_works}
                                             />
-                                }) : data.wordpressPage?.acf?.my_works.filter((item, index) => item.type_of_works === workType).map((item, index) => {
+                                }) : data.wordpressPage?.acf?.my_works.filter((item, index) => item.type_of_works.includes(workType)).map((item, index) => {
                                     return <PortfolioItem key={index}
                                                         title={item.title_work}
                                                         image={item.image_preview?.localFile?.childImageSharp?.fixed}

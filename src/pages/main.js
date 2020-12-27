@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import TopMenu from "../components/TopMenu";
 import Services from "../components/services/Services";
 import Portfolio from "../components/portfolio/Portfolio";
+import Contacts from "../components/contacts/Contacts";
 
 
 
@@ -22,6 +23,7 @@ const Main = () => {
             <TopMenu/>
             <Services/>
             <Portfolio/>
+            <Contacts/>
         </LayoutWrapper>
     );
 }

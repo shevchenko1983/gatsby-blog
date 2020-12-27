@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '../../../node_modules/styled-components';
 import Img from 'gatsby-image';
-import {color} from "../../utils/styled-layout";
+import {color, sizing} from "../../utils/styled-layout";
 import HTMLReactParser from "html-react-parser";
 
 const FigureItemWrapper = styled('figure')`
@@ -15,6 +15,10 @@ const FigureItemWrapper = styled('figure')`
       background: ${color.workItemBgBubba};
       text-align: center;
       cursor: pointer;
+      
+      & p{
+        font-size: ${sizing.text};
+      }
       
       & img{
         position: relative;

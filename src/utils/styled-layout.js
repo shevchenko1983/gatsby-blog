@@ -275,7 +275,7 @@ export const layoutStyles = css`
 
 //Input Styles
 export const inputsStyles = css`
-    .input-group .form-control {
+    .form-control {
       z-index: auto;
     }
     
@@ -286,33 +286,29 @@ export const inputsStyles = css`
      font-weight: ${font.headingWeight};
     }
     
-    .form-control {
+    .form-control,
+     .form input{
      background: ${color.white};
      border: 1px solid ${color.inputBg};
      font-size: ${sizing.text};
      padding: 0 15px;
+     height: 38px;
+     font-size: ${sizing.text};
+     margin-bottom: 15px;
+     
     }
     
     .form-control:focus{
       border-color: ${color.inputBgBorderColor};
     }
     
-    .input-lg,
-    .form-horizontal .form-group-lg .form-control {
-     height: 38px;
-     font-size: ${sizing.text};
-    }
     
-    .input-sm,
-    .form-horizontal .form-group-sm .form-control {
-     font-size: 11px;
-     height: 30px;
-    }
-    
-    textarea.form-control {
+    textarea.form-control,
+     .form textarea{
      padding: 15px;
      max-width: 100%;
      min-width: 100%;
+     height: auto;
     }
 `;
 
@@ -371,3 +367,6 @@ export const btnStyles = css`
     }
 
 `;
+
+
+export const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

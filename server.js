@@ -32,9 +32,9 @@ contactEmail.verify((error) => {
 
 //Receive data and send it to destination
 router.post("/contact", (req, res) => {
-    const name = req.body.name;
-    const email = req.body.email;
-    const message = req.body.message;
+    const name = req.body.namedsfpj;
+    const email = req.body.emaildsfpj;
+    const message = req.body.messagedsfpj;
     const mail = {
         from: name,
         to: "shevadon01@gmail.com",

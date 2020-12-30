@@ -3,6 +3,7 @@ import styled from '../../../node_modules/styled-components';
 import {Field, Form, Formik} from "formik";
 import * as Yup from 'yup';
 import {btnStyles, EMAIL_REGEX, inputsStyles} from "../../utils/styled-layout";
+import {onSubmitFormHandler} from "../../utils/helper";
 
 
 const ContactFormWrapper = styled('div')`
@@ -25,10 +26,6 @@ const validationSchema = Yup.object().shape({
 });
 
 const ContactForm  = () => {
-
-    const onSubmitFormHandler = (values) => {
-        console.log(values);
-    };
 
     return(
         <ContactFormWrapper className={"col-sm-6 offset-sm-3 form"}>

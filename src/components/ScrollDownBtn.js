@@ -52,6 +52,15 @@ const ScrollDownBtnWrapper = styled('span')`
         30%  { top:10px; opacity: 1;}
         100% { top:25px; opacity: 0;}
     }
+    
+    @media(max-width:767px){   
+        .scroll-down{
+            left: 0;
+            right: 0;
+            display: inline-block;
+            margin: auto;
+        }
+    }
 `;
 
 const ScrollDownBtn = () => {

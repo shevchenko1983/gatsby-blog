@@ -100,6 +100,20 @@ const TopMenuWrapper = styled('div')`
     }
    }
    
+   @media(max-width:991px){
+     .nav>li>a{
+        padding: 10px 5px;
+        font-size: ${sizing.small};
+        line-height: 30px;
+     }    
+   }
+   
+   @media(max-width:400px){
+    .navbar-custom .navbar-brand{
+        font-size: ${sizing.default};
+    }
+  }
+   
 `;
 
 const TopMenu = () => {

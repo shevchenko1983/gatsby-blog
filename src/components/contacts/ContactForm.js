@@ -100,7 +100,7 @@ const ContactForm  = () => {
 
                         <button type="submit"
                                 className="btn btn-lg btn-block wow animate__animated animate__fadeInUp progress-button"
-                                //disabled={!isValid}
+                                disabled={!isValid}
                         >Send Message</button>
                     </Form>
                 )}

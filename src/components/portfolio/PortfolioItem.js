@@ -32,6 +32,12 @@ const PortfolioItemWrapper = styled('div')`
         }
     }
     
+    @media(max-width:500px){   
+      .works-item{
+        width: 100%;
+      }
+    }
+    
 `;
 
 const PortfolioItem = ({title, link, image, description, workType}) => {

@@ -173,6 +173,12 @@ const FigureItemWrapper = styled('figure')`
       } 
      
     }
+    
+    @media(max-width:500px){
+      figure.effect-bubba{
+        max-height: inherit;
+      }   
+    }
 `;
 
 const FigureItem = ({title, image, description}) => {

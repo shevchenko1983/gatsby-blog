@@ -43,7 +43,7 @@ const Portfolio = () => {
             `}
             render={
                 data => (
-                    <PortfolioWrapper id={"portfolio"} className={"pfblock"}>
+                    <PortfolioWrapper id="portfolio" className={"pfblock"}>
                         <div className="container">
                             <div className="row">
                                 <SectionTopDescription content={{

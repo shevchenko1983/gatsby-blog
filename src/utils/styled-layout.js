@@ -52,6 +52,8 @@ export const color = {
     btnHoverBg: 'rgba(17, 17, 17, 1.8)',
     btnCallToAction: '#111',
     btnCallToActionBg: 'rgba(255, 255, 255, .8)',
+    socialBtnsBorder: 'rgba(255,255,255,.1)',
+    socialBtnsColor: 'rgba(255,255,255,.2)',
     shadowText: '2px 1px 1px rgba(255,255,255,0.4)',
     bubbaTextShadow: '2px 1px 2px rgba(0, 0, 0, 0.86)',
     headerOverlay: 'rgba(44, 62, 80, 0.3)',

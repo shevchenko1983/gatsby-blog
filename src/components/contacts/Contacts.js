@@ -24,7 +24,7 @@ const Contacts = () => {
         `}
          render={
              data => (
-                <ContactsWrapper id="services" className={"pfblock pfblock-gray"}>
+                <ContactsWrapper id="contact" className={"pfblock pfblock-gray"}>
                     <div className="container">
                         <div className="row">
                                 <SectionTopDescription

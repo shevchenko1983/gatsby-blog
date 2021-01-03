@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from '../../node_modules/styled-components';
-import {color} from "../utils/styled-layout";
+import styled from 'styled-components';
+import {color} from "../../utils/styled-layout";
+import FooterSocial from "./FooterSocial";
 
 const FooterWrapper = styled('footer')`    
     background: ${color.headingColor};
@@ -20,13 +21,14 @@ const FooterWrapper = styled('footer')`
 const Footer = () => {
     return (
         <FooterWrapper id={"footer"} className={"site-footer"}>
-            <divf className="container">
+            <div className="container">
                 <div className="row">
                     <div className="site-footer-inner col-sm-12">
+                        <FooterSocial/>
                         <p className="copyright">&copy; {new Date().getFullYear()} Andrey Snevchenko</p>
                     </div>
                 </div>
-            </divf>
+            </div>
         </FooterWrapper>
     )
 };

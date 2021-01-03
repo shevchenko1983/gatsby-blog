@@ -3,6 +3,7 @@ import {graphql, StaticQuery} from "gatsby";
 import styled from '../../node_modules/styled-components';
 import {color, font, sizing} from "../utils/styled-layout";
 import {CgMenu} from "react-icons/cg";
+import {Link} from "react-scroll";
 
 const TopMenuWrapper = styled('div')`
     & .header {
@@ -151,8 +152,19 @@ const TopMenu = () => {
                                     <div className={ clickOnMobileBtn ? "collapse navbar-collapse show" : "collapse navbar-collapse" } id="navbarNav">
                                         <ul className="navbar-nav">
                                             {data.wordpressWpApiMenusMenusItems?.items.map((item, index) => {
-                                                return <li className="nav-item" key={index}>
-                                                            <a className="nav-link" href={item.url}>{item.title}</a>
+                                                return  <li className="nav-item">
+                                                             <Link  key={item.title + index}
+                                                                    className={"nav-link"}
+                                                                    //activeClass="active"
+                                                                    href={item.url}
+                                                                    to={item.title.toLowerCase()}
+                                                                    spy={true}
+                                                                    smooth={true}
+                                                                    offset={0}
+                                                                    duration={1000}
+                                                                >
+                                                                {item.title}
+                                                            </Link>
                                                         </li>
                                             })}
                                         </ul>

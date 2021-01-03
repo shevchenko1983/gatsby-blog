@@ -9,7 +9,7 @@ import TopMenu from "../components/TopMenu";
 import Services from "../components/services/Services";
 import Portfolio from "../components/portfolio/Portfolio";
 import Contacts from "../components/contacts/Contacts";
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 
 
 

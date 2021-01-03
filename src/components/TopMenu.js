@@ -6,6 +6,12 @@ import {CgMenu} from "react-icons/cg";
 import {Link} from "react-scroll";
 
 const TopMenuWrapper = styled('div')`
+    position: sticky;
+    top: 0;
+    display: block;
+    z-index: 100;
+    box-shadow: ${color.headerShadow};
+    
     & .header {
      border-bottom: 1px solid ${color.lightGrey};
      position: relative;

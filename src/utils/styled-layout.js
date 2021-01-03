@@ -56,6 +56,7 @@ export const color = {
     socialBtnsColor: 'rgba(255,255,255,.2)',
     shadowText: '2px 1px 1px rgba(255,255,255,0.4)',
     bubbaTextShadow: '2px 1px 2px rgba(0, 0, 0, 0.86)',
+    headerShadow: '2px 1px 7px rgba(0, 0, 0, 0.2)',
     headerOverlay: 'rgba(44, 62, 80, 0.3)',
     workItemBgBubba: '#3085a3',
     bubbaBg: '#9e5406',
@@ -68,7 +69,7 @@ export const layoutStyles = css`
     font-weight: ${font.lightWeight};
     font-size: ${sizing.normal};
     color: ${color.backgroundColor};
-    overflow: hidden;
+    // overflow: hidden;
     
     a {
      color: ${color.linkColor};

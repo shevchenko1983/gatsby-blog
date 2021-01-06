@@ -51,6 +51,7 @@ const FilterWorksWrapper = styled('div')`
         }
         &.filter-works ul li{
             width: 100%;
+            margin: auto;
         }    
     }  
 `;

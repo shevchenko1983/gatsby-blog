@@ -103,6 +103,7 @@ const FigureItemWrapper = styled('figure')`
         transition: opacity 0.35s, transform 0.35s;
         -webkit-transform: translate3d(0,20px,0);
         transform: translate3d(0,20px,0);
+        word-break: break-all;
       }
       &:before,
       &:after{

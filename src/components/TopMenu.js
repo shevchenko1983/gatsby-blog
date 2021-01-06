@@ -28,7 +28,9 @@ const TopMenuWrapper = styled('div')`
          font-weight: ${font.headingWeight};
       }
     }   
-    
+    & .navbar-brand{
+       white-space: normal;
+    }
     & .navbar-custom,
     & .navbar-custom .dropdown-menu {
      background: ${color.white};
@@ -158,9 +160,8 @@ const TopMenu = () => {
                                     <div className={ clickOnMobileBtn ? "collapse navbar-collapse show" : "collapse navbar-collapse" } id="navbarNav">
                                         <ul className="navbar-nav">
                                             {data.wordpressWpApiMenusMenusItems?.items.map((item, index) => {
-                                                return  <li className="nav-item">
-                                                             <Link  key={item.title + index}
-                                                                    className={"nav-link"}
+                                                return  <li className="nav-item" key={item.title + index}>
+                                                             <Link  className={"nav-link"}
                                                                     //activeClass="active"
                                                                     href={item.url}
                                                                     to={item.title.toLowerCase()}

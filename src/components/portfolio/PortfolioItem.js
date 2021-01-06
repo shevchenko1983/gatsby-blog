@@ -12,6 +12,7 @@ const PortfolioItemWrapper = styled('div')`
         max-width: 100%;
         list-style: none;
         text-align: center;
+        overflow: hidden;
         
         & h2{
             font-size: 1em;

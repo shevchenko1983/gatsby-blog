@@ -60,7 +60,7 @@ const IconBox = ({title, text, icon, animationName}) => {
                 //scrollContainer: scroll(".tets") // optional scroll container selector, otherwise use window
             }).init();
         }
-    }, [window]);
+    }, [typeof window]);
 
     //for choosing current Icon for Block
     const chooseCurrentIcon = (iconName) => {

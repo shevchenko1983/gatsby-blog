@@ -15,7 +15,8 @@
     "clean": "gatsby clean",
     "preload-fonts": "gatsby-preload-fonts",
     "server": "nodemon server.js",
-    "dev": "concurrently \\\"npm:server\\\" \\\"npm:start\\\""
+    "dev": "concurrently \\\"npm:server\\\" \\\"npm:start\\\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "license": "0BSD",
   "dependencies": {
@@ -37,6 +38,7 @@
     "gatsby-source-filesystem": "^2.7.0",
     "gatsby-source-wordpress": "^3.7.0",
     "gatsby-transformer-sharp": "^2.8.0",
+    "gh-pages": "^3.1.0",
     "html-react-parser": "^0.14.2",
     "html-to-react": "^1.4.5",
     "nodemailer": "^6.4.17",

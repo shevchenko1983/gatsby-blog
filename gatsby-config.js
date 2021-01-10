@@ -1,4 +1,9 @@
 module.exports = {
+  pathPrefix: '/gatsby-blog/',
+  siteMetadata: {
+    title: 'Web Developer Andrey Shevchenko',
+    content: 'Creating and developing amazing modern web projects. Individual solution for each project and to each customer.'
+  },
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",

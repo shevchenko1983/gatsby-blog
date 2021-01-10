@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     result.data.allWordpressPage.edges.forEach(edge => {
         let pageTemplateCurrent;
-        switch (edge.node.path) {
+        switch (edge.node.slug) {
             case "/":
                 pageTemplateCurrent = pageMainTemplate;
                 break;

@@ -5,11 +5,13 @@ module.exports = {
     "gatsby-plugin-offline",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-preload-fonts",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
         path: `${__dirname}/src/images/`,
+
       },
       __key: "images",
     },
@@ -20,6 +22,21 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
 
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'UA-111669662-2',
+        // Include GTM in development.
+        //
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+        /*defaultDataLayer: { platform: "gatsby" },
+         Specify optional GTM environment details.
+        gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING',
+        gtmPreview: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME',
+        dataLayerName: 'YOUR_DATA_LAYER_NAME', */
+      },
     },
 
     {

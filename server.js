@@ -13,13 +13,15 @@ app.listen(port, () => console.log("Server is running on 5000 PORT"));
 
 
 //Set General Email Options
+const passAuthGoogle = 'kefxbziizpujytnj';
 const contactEmail = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: "shevchenkoandrey160@gmail.com",
-        pass: "travelWork!@account759",
+        pass: passAuthGoogle,
     },
 });
+//console.log("ContactsOptions", contactEmail);
 //Checking General Email Options
 contactEmail.verify((error) => {
     if (error) {
@@ -46,6 +48,7 @@ router.post("/contact", (req, res) => {
     };
     contactEmail.sendMail(mail, (error) => {
         if (error) {
+            console.log(res, error);
             res.json({ status: "ERROR" });
         } else {
             res.json({ status: "Message Sent" });

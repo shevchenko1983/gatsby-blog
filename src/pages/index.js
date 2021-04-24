@@ -10,6 +10,7 @@ import Services from "../components/services/Services";
 import Portfolio from "../components/portfolio/Portfolio";
 import Contacts from "../components/contacts/Contacts";
 import Footer from "../components/footer/Footer";
+import SEO from "../components/seo/Seo";
 
 
 
@@ -20,6 +21,7 @@ const LayoutWrapper = styled('div')`
 const Index = () => {
     return(
         <LayoutWrapper>
+            <SEO/>
             <Header/>
             <TopMenu/>
             <Services/>

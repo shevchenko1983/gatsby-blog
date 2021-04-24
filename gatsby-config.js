@@ -2,7 +2,9 @@ module.exports = {
   pathPrefix: '/gatsby-blog',
   siteMetadata: {
     title: 'Web Developer Andrey Shevchenko',
-    content: 'Creating and developing amazing modern web projects. Individual solution for each project and to each customer.'
+    description: 'Creating amazing modern web projects. Individual solution for each project and to each client.',
+    content: 'Creating and developing amazing modern web projects. Individual solution for each project and to each client.',
+    url: 'https://andrei-shevchenko.com/'
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -11,6 +13,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-preload-fonts",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
       options: {

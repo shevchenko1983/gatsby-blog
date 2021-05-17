@@ -35,19 +35,21 @@ const validationSchema = Yup.object().shape({
         .required("Must be some Text"),
 });
 
-const ContactForm  = () => {
+const initialValues = {
+    namedsfpj: "",
+    emaildsfpj: "",
+    messagedsfpj: ""
+}
 
+const ContactForm  = () => {
     return(
         <ContactFormWrapper className={"col-sm-6 offset-sm-3 form"}>
             <Formik
-                initialValues={{
-                    namedsfpj: "",
-                    emaildsfpj: "",
-                    messagedsfpj: ""
-                }}
+                initialValues={initialValues}
                 validationSchema={validationSchema}
                 onSubmit={ (values, actions) => {
-                    onSubmitFormHandler(values);
+                    onSubmitFormHandler(values)
+                    .then(() => actions.resetForm(initialValues));
                     actions.setSubmitting(false);
                 }}
             >

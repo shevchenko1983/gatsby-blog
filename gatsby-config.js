@@ -50,10 +50,12 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "andrei-shevchenko.com",
-        protocol: "http",
+        baseUrl: "gatsby.andrei-shevchenko.com",
+        protocol: "https",
         hostingWPCOM: false,
         useACF: true,
+        // Set to true to debug endpoints on 'gatsby build'
+        verboseOutput: true,
         includedRoutes: [
           '**/posts',
           '**/pages',
